@@ -1,0 +1,40 @@
+<block wx:for="{{img}}" wx:key="index">
+<view class="{{item.id === titleId? 'bg' : ''}}" style="background:url({{item.url}}) top/cover no-repeat">
+</view>
+</block>
+
+
+<view class="all">
+<!-- 空占一定高度 -->
+  <view class="container" bindlongtap="activeTitle" bindtap="activeTitle"></view>
+
+
+<!-- 标题文字 -->
+  <view class="title">
+  <block wx:for="{{title}}" wx:key="id">
+    <text class="{{item.id === titleId? 'active' : ''}}" data-titleId="{{item.id}}" data-index="{{index}}" bindtap="activeTitle" >{{item.name}}</text>
+  </block>
+</view>
+</view>
+
+<view class="newsong">
+  <block wx:for="{{newSong}}" wx:key="index">
+<view class="item" bindtap="goToPlayer" data-id="{{item.id}}" data-index="{{index}}">
+ 
+  <image class="img" hidden="{{item.id ===playerId? 'true' : ''}}"  src="{{ item.album.picUrl}}" mode="widthFix heightFix"/>
+
+  <!-- 播放时显示上下播放图标 -->
+ <view class="iconfont {{item.id ===playerId ? 'icon-paixingbang':''}}"  ></view>
+  
+<view class="same">
+  <text class="width === 200rpx ? 'playname' : 'playlist-name'">{{item.album.name}}</text>
+<text class="player" decode="true">{{item.album.artists[0].name}}&ensp;{{item.album.artists[1].name}}&ensp;{{item.album.artists[2].name}}</text>
+</view>
+<!-- 歌曲是否有mv，有就显示mv图标 -->
+<text class="iconfont {{item.mvid === 0? '' : 'icon-shipin'}}" catchtap="goToMVDetail" data-mvid="{{item.mvid}}"></text>
+</view>
+
+</block>
+
+
+</view>

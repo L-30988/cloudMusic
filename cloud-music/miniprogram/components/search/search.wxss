@@ -1,0 +1,26 @@
+/* components/search/search.wxss */
+.container{
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+  position: relative;
+
+}
+.bar{
+  flex: 1;
+  height: 68rpx;
+
+  font-size: 28rpx;
+  border-radius: 50px;
+  background-color: rgb(237, 235, 235);
+  padding-left: 60rpx;
+  
+}
+.search .search-img{
+  margin-left: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.in-bar{
+  color: #999;
+}

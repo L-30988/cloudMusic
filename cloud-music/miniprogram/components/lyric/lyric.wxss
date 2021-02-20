@@ -1,0 +1,22 @@
+/* components/lyric/lyric.wxss */
+.lyric-scroll{
+  width: 85%;
+  height: 70%;
+  color: rgb(158, 157, 157);
+  font-size: 32rpx;
+  padding: 8%
+ 
+  
+}
+/*隐藏滚动条*/
+
+.lyric-panel{
+  position: relative;
+  top: 35%
+}
+.lyric{
+  min-height: 64rpx
+}
+.hightlight-lyric{
+  color: #ffffff
+}

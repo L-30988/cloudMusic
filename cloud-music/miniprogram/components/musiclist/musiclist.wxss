@@ -1,0 +1,35 @@
+/* components/musiclist/musiclist.wxss */
+.container{
+  display: flex;
+  padding: 14rpx 20rpx;
+  align-items: center;
+}
+.index{
+  color: #888;
+  font-size: 34rpx;
+  width: 85rpx;
+  
+}
+.info{
+  flex-grow: 1;
+  width: 0;
+ 
+}
+.name{
+  font-size: 30rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 10rpx;
+}
+.alia{
+  color: #888
+}
+.singer{
+  font-size: 24rpx;
+  color: #888
+}
+.playing view, .playing text {
+  color: #b007ff;
+}

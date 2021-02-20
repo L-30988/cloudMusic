@@ -1,0 +1,35 @@
+<!--pages/musiclist/musiclist.wxml-->
+<view class="container" style="background: url({{listInfo. coverImgUrl}}) no-repeat top/cover"></view>
+<view class="mask"></view>
+<view class="info" >
+<image class="img" src="{{coverImgUrl}}"></image>
+<view class="detail">
+<view class="name">{{name}}</view>
+<view class="creator">
+<image class="avatarUrl" src="{{listInfo.avatarUrl}}"></image>
+<view class="nickname">{{listInfo.nickname}}</view>
+</view>
+<view class="description">{{listInfo.description}}</view>
+</view>
+</view>
+<view class="text">
+<image class="text-img" src="/images/playing.jpg"></image>
+<view class="text-tx">播放全部 (⊙o⊙)?</view>
+</view>
+<!--loading-->
+  <view class="loading" hidden="{{!loading}}">主人，我已经在努力了...
+<view>
+        <text class="cl1"></text>
+        <text class="cl2"></text>
+        <text class="cl3"></text>
+</view>
+  </view>  
+<x-musiclist  musiclist="{{musiclist}}"/>
+
+
+
+
+
+
+
+

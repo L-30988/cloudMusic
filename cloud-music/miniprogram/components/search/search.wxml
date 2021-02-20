@@ -1,0 +1,6 @@
+<!--components/search/search.wxml-->
+<view class="container">
+<input class="bar" placeholder="{{placeholder}}" placeholder-class="in-bar" bindinput="input"></input>
+<view class="search" bindtap="search"><image class="search-img" src="/images/search.jpg"></image></view>
+
+</view>

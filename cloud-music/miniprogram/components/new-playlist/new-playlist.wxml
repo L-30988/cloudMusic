@@ -1,0 +1,9 @@
+<block wx:for="{{newPlaylist}}" wx:key="index">
+<view class="newPlaylist" data-id="{{item.id}}" bindtap="goToMusiclist">
+      <image class="img" src="{{item.coverImgUrl}}" mode="widthFix heightFix"/>
+      <view class="playlistname">
+       <text class="name">{{item.name}}</text>
+       <text class="author">{{item.trackCount}}首-{{item.creator.nickname}}</text>
+      </view>
+    </view>
+</block>

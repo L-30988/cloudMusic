@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "x-mv": "/components/mv/mv",
+    "x-loading": "/components/loading/loading"
+  },
+  "navigationBarTitleText": "MV",
+  "enablePullDownRefresh": true
+}

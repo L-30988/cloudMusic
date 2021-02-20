@@ -1,0 +1,105 @@
+<!-- 头部视频区 -->
+<view class="height">
+
+<view class="{{scroll===false? 'mvimg':'scrollMvimg'}}"><text class="textmv">mv</text></view>
+
+<view class="{{scroll===false? 'mv':'scrollmv'}}">
+  <!-- 点击下拉图标隐藏评论详情区 -->
+  <view class="{{scroll===false? 'downHiden':'down'}}" bindtap="comment" data-index="1"><text class="iconfont icon-down"></text></view>
+  <video class="video" src="{{mvurl}}" autoplay loop play-btn-position="center" vslide-gesture="true" show-progress="{{false}}" controls="{{true}}"  show-fullscreen-btn="{{false}}" object-fit="cover" picture-in-picture-mode="{{ ['push', 'pop']}}"></video>
+  
+ 
+  
+  <view class="mvurlNull" hidden="{{mvurlNull}}">暂无版权😭</view>
+</view>
+
+</view>
+
+
+
+
+  <!-- 视频内容详情区 -->
+<view class="all"  wx:if="{{showCommentIndex == 0 }}" >
+  <!-- mv视频详情介绍区 -->
+  <view class="mvDetailAllHeight">
+  <view class="mvDetail">
+  <view class="nullheight"></view>
+
+
+  <view class="avatarheight">
+    <view class="avatar">
+      <image class="avatarimg" src="{{artistImg}}" mode="widthFix heightFix"/>
+      <text class="playername">{{artistName}}</text>
+    </view>
+    <!-- 折叠面板 -->
+    <view class="mvname" data-index="1" bindtap="up">
+      <text class="playername ">{{mvName}}</text>
+      <text class="iconfont up {{showIndex === 0? 'icon-xia' : 'icon-shang'}}"></text>
+    </view>
+    <text class="nameDetail" wx:if="{{showIndex == 1}}">{{mvDesc}}</text>
+
+  </view>
+
+ 
+
+
+</view>
+<view class="palyCpunt">{{playCount}}次观看</view>
+</view>
+
+<!-- 点赞评论分享区 -->
+<view class="comment">
+  <text class="top iconfont icon-dianzan "><text class="same">{{likeCount}}</text></text>
+  <text class="top iconfont icon-tubiaozhizuo-" bindtap="comment" data-index='1'><text class="same">{{allComentCount}}</text></text>
+  <text class="top iconfont icon-share-fill"><text class="same">{{shareCount}}</text></text>
+</view>
+
+</view>
+
+
+ <!-- 评论详情区 -->
+<view class="commentDatail {{showCommentIndex == 0? 'commentHidden':''}}" wx:if="{{showCommentIndex == 1 }}">
+ <view class="allcomments">
+  <text class="allcomment">全部评论({{allComentCount}})</text>
+  <text class="iconfont icon-shanchu" bindtap="comment" data-index="1"></text>
+</view>
+<view class="underline"></view>
+<view class="AllcommentScorll">
+  <scroll-view scroll-y="true">
+  <block wx:for="{{userComment}}" wx:key="index">
+<view class="Allcommentlist">
+<view  class="commentlist">
+  <image class="avatarimg" src="{{item.user.avatarUrl}}" mode="widthFix heightFix"/>
+    <view class="user">
+      <text class=" username">{{item.user.nickname}}</text>
+      <text class="time">{{item.time}}</text>
+    </view>
+</view>
+<view class="content">{{item.content}}</view>
+</view>
+</block>
+<x-loading loading="{{loading}}" loadingComplete="{{loadingComplete}}"/>
+</scroll-view>
+
+
+
+</view>
+
+
+
+
+
+
+</view> 
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+<!--pages/blog/blog.wxml-->
+<view class="container">
+<!--header-->
+<view class="header">
+<view class="publish" bindtap="publish">
+<i class="iconfont icon-fabu"></i>
+</view>
+
+<view class="search">
+<x-search bind:search="search" />
+</view>
+</view>
+<!--blog-card列表-->
+<view class="blog-list">
+<block wx:for="{{blogList}}" wx:key="_id">
+<view class="blog-panel">
+<x-blog-card blog="{{item}}" data-blogId="{{item._id}}" bindtap="goComment" />
+<x-blog-ctrl iconfont="iconfont"  icon-pinglun="icon-pinglun" icon-fenxiang=" icon-fenxiang"
+blogId="{{item._id}}" blog="{{item}}"/>
+</view>
+</block>
+</view>
+
+
+<!--底部弹出层-->
+<x-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
+
+</x-login>
+</view>
+
+<!--loading-->
+  <view class="loading" hidden="{{!loading}}">正在加载...
+  </view>  

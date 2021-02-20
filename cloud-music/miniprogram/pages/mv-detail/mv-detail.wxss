@@ -1,0 +1,235 @@
+page {
+  background-color: black;
+  height: 100%;
+  
+  }
+  .a{
+    width: 100%;
+    height: 500rpx;
+  }
+  .height{
+    width: 100%;
+    height:50%;
+  }
+  
+  
+ 
+   .mvimg {
+    width: 60rpx;
+    height: 45rpx;
+    background-color: rgb(252, 252, 252,0.7);
+    margin-bottom: 100rpx;
+    border-radius: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     margin: auto;
+  } 
+  .scrollMvimg{
+    display: none;
+  }
+  .textmv {
+    color: black;
+    font-size: 30rpx;
+  }
+   .mv{
+    width: 100%;
+    height: 55%;
+    margin-top: 18%;
+   
+  } 
+  .scrollmv{
+    width: 100%;
+    height: 30%;
+    position: fixed;
+    z-index: 99;
+   
+  }
+  .down{
+    background-color: black; 
+   height: 50rpx;
+   text-align: center;
+   
+ }
+ .downHiden{
+   display: none;
+ }
+ .icon-down{
+   color: gray;
+ }
+
+  .video{
+   
+    width: 100%;
+    height: 100%;
+  }
+  .mvurlNull{
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+  }
+  .iconfont{
+    color:#fff;
+ 
+  }
+  .all{
+  display: none;
+    display: flex;
+    width: 100%;
+   height: 50%;
+
+  }
+  .mvDetailAllHeight{
+    height: 100%;
+    width: 85%;
+  }
+  .mvDetail{
+   overflow: scroll;
+    width: 85%;
+    height: 90%;
+
+
+  }
+  /*隐藏scroll滚动条*/
+::-webkit-scrollbar{
+  display: none;
+  }
+  .nullheight{
+  width: 100%;
+  height: 60%;
+  }
+  .avatarheight{
+    width: 100%;
+    height: 40%;
+  }
+  .palyCpunt{
+    color: rgb(180, 180, 180);
+    font-size: 25rpx;
+  
+
+    margin-left: 20rpx;
+  }
+  .avatar{
+    display: flex;
+    align-items: center;
+
+  }
+
+  .playername{
+    margin-left: 10rpx;
+    color: #fff;
+    font-size: 30rpx;
+    font-weight: 550;
+  }
+  .avatarimg{
+    width: 65rpx;
+    height: 65rpx;
+    border: 2rpx solid #fff;
+    border-radius: 50%;
+
+  }
+  
+ 
+  .up{
+    font-size: 22rpx;
+    margin-left: 10rpx;
+  }
+  .nameDetail{
+
+    font-size: 25rpx;
+    color: rgb(172, 170, 170);
+    height: 10rpx;
+
+    
+  }
+ 
+  .comment{
+   
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+   
+  }
+  .top{
+    font-size: 50rpx;
+    margin-top: 40rpx;
+  }
+  .same{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20rpx;
+    color: rgb(172, 170, 170);
+  }
+
+  .commentDatail{
+      height: 50%;
+    width: 100%; 
+    background-color: #fff;
+    border-top-right-radius: 40rpx;
+    border-top-left-radius: 40rpx;
+    
+    
+  }
+  /* 设置评论隐藏 */
+  .commentHidden{
+    display: none;
+  }
+
+  .allcomments{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+.allcomment{
+ font-size: 35rpx;
+
+}
+  .icon-shanchu{
+position: absolute;
+margin-left: 45%;
+    color: black;
+    font-size: 60rpx;
+  }
+  .underline{
+    width: 100%;
+    height: 3rpx;
+    margin-top: 15rpx;
+    background-color: darkgray;
+  }
+  
+  /* .AllcommentScorll{
+     /* overflow: scroll;  */
+  /* height: 85%; 
+  } */
+  scroll-view{
+    background-color: #fff;
+  }
+  .Allcommentlist{
+    margin-top: 20rpx;
+  }
+  .commentlist{
+    display: flex;
+
+  }
+  .user{
+    display: flex;
+    flex-direction: column;
+  }
+  .username{
+color: rgb(91, 0, 109);
+font-size: 30rpx;
+  }
+  .time{
+    color: darkgray;
+    font-size: 25rpx;
+  }
+.content{
+  margin-left: 70rpx;
+  font-size: 30rpx;
+}
+  
+  

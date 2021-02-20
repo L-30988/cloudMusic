@@ -1,0 +1,40 @@
+.loading {
+  padding: 50rpx 0;
+  text-align: center;
+  color: rgb(53, 53, 53);
+  font-size: 26rpx;
+  }
+  @keyframes loading{
+    0%{ transform: translateY(0rpx)}
+    50%{ transform: translateY(20rpx)}
+    100%{ transform: translateY(0rpx)}
+  }
+  .loading .same {
+  width: 5rpx;
+  height: 30rpx;
+  background-color: #2A0463;
+  position: relative;
+  display: inline-block;
+  margin-right: 6rpx;
+  border-radius: 3rpx;
+  animation: loading .9s linear infinite;
+  transform-origin: center bottom;
+  
+  }
+  .loading .all {
+  display: inline-block;
+  vertical-align: baseline;
+  height: 30rpx;
+  overflow: hidden;
+  margin-left: 10rpx;
+  
+  }
+  
+  .loading .cl2 {
+  animation-delay: -.6s;
+  
+  }
+  .loading .cl3 {
+  animation-delay: -.3s;
+  
+  } 

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "x-playlist": "/components/playlist/playlist",
+    "x-loading": "/components/loading/loading"
+  },
+  "navigationBarTitleText": "歌单",
+  "enablePullDownRefresh": true
+}

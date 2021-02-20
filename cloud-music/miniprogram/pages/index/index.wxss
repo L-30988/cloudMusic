@@ -1,0 +1,179 @@
+page{
+  background-color: rgb(245, 245, 245);
+}
+.header {
+  display: flex;
+  justify-content: center;
+
+}
+
+.search {
+  width: 80%;
+  margin-top: 8rpx;
+}
+
+.swiper {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30rpx;
+
+}
+
+swiper {
+  height: 250rpx;
+}
+
+swiper-item {
+  border-radius: 25rpx;
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15rpx;
+}
+.iconfont{
+  font-size: 62rpx;
+  color: blueviolet;
+}
+
+.playlist-recommend {
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: 15rpx;
+  color: #6c6c70;
+
+}
+
+.playlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 10rpx;
+  flex-direction: row;
+}
+
+.more {
+  width: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+  margin-left: 80%;
+  margin-bottom: 20rpx
+}
+
+.newMusic {
+  width: 100%;
+  height: 350rpx;
+  background-color: springgreen;
+
+}
+
+.musicImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 20rpx;
+}
+
+.all {
+  width: 100%;
+  background-color: steelblue;
+  display: flex;
+  align-items: center;
+}
+
+.recommendList {
+  border: 1rpx solid #cac8c8;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 8rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 25rpx;
+  height: 120rpx;
+}
+
+.recommendImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 18rpx;
+  margin-left: 5rpx;
+}
+
+.playname {
+  width: 200rpx;
+  font-size: 30rpx;
+}
+
+.playlist-name {
+
+  font-size: 30rpx;
+  line-height: 1.2;
+  padding: 2px 0 0 6px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player {
+  color: rgb(150, 150, 150);
+  font-size: 28rpx;
+}
+/*隐藏scroll-view滚动条*/
+::-webkit-scrollbar{
+  display: none;
+  }
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  position: relative;
+  width: 280rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  
+
+}
+
+.mvImg {
+  width: 280rpx;
+  height: 190rpx;
+  border-radius: 15rpx;
+}
+.playlist-playcount{
+  color: #fff;
+  font-size: 24rpx;
+  text-shadow: 1px 0 0 rgb(0, 0, 0);
+  position: absolute;
+  right: 10rpx;
+  top: 4rpx;
+  padding-left: 26rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACSElEQVRoQ9XaQUocQRQG4P8dwEWyd+EZssjWS+QSXsDtDOgkoIsgaMAEFUVBosGIhICCIhICkSgREkWFiaiIJhqCiItAy4O/YOjUOE53VVd1Lbt7qv6varqreTMCS0uS5BmAHgAdAJYA9InIP9u1oY9JOkCSJI8B/E4d/wSgX0Q+hA6cHt8GeArgc5OgLwn5FQvEBugGsHpPwO9EzMSAyAIwuScIOQgJyQPQ3KdEjIRC5AWY3AuEbBYNcQXQ3DdE1IpEuASY3GuErBQB8QEwuQe4Af71CfEJ0NzbXI05XwjfAJP7NVfjyDWkKIDmrnM13rhEFAkwud9yNb65gIQAaO4/XI3BvIhQAJN7mauxnhUSGmBy9xNy2y4kFoDm/kLEYjuImAAm9zAhZw+BxAjQ3PtETLZCxAowuacJ2W0GiR2guS+IGLIhygAwuSsiUk0jygQ4FpHOMgPqItJVZkBVRCplBJzzvamUN/EUw++V7TH6g8F1H7i3xfgUaqt8GRNgg7P+sdWsN56PAaCv0Po6rdXvpJ3wem1owHsG11fpTC0U4ITBX2VK3fChEIAxADUROcwbvuivkFYhNPisi+Cmj6JWQKsPepNqNcJp8w3wXuj1BbjmjL9wOt2WznwA5hl+y3d41zfxTwbXQm5hzdUKjDK88+pzq5nIC/jK4O9aDeTrfB7Acz7X9YYN1rIAtCCrG5I+IoM3G+AJANvPpVcMnrsk7lJtAzwCcJkaRLd/3Ul3XA7uoq//ANop/27TywGGRWTcxWA++rgD/RgcQBZcVC4AAAAASUVORK5CYII=) no-repeat 0 8rpx/22rpx 20rpx;
+}
+.mvname{
+  font-size: 33rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mvautor{
+
+  font-size: 28rpx;
+  color: #5b5b5c;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+

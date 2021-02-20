@@ -1,0 +1,28 @@
+<!--pages/blog-edit/blog-edit.wxml-->
+
+<view class="header">
+<view class="sendword">发表文字</view>
+<text class="words-num">{{wordsNum}}</text>
+<button class="send" style="width:30rpx" bindtap="send" >GO</button>
+</view>
+
+
+<view class="container">
+<textarea class="content" placeholder="这一刻的想法..." bindinput="onInput" maxlength="200"></textarea>
+<view class="image-list">
+<!--显示图片-->
+<block wx:for="{{images}}" wx:key="*this">
+<view class="image-wrap">
+<image class="image" src="{{item}}" mode="aspectFill" bindtap="previewImg" data-imgsrc="{{item}}"></image>
+<i class="iconfont icon-shanchu" bindtap="delImage" data-index="{{index}}"></i>
+</view>
+</block>
+<!--选择图片-->
+<view class="image-wrap selectphoto" bindtap="chooseImage" hidden="{{!selectPhoto}}">
+<i class="iconfont icon-jiahao"></i>
+</view>
+</view>
+</view>
+
+
+

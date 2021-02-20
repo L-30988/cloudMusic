@@ -1,0 +1,107 @@
+<view class="container">
+  <input class="input" type="text" placeholder="{{showKeyword}}" value="{{inputValue}}" placeholder-class="placeholderColor" bindconfirm="input"
+    bindinput="searchSuggest" confirm-type="search"></input>
+    
+    <text class="iconfont icon-shanchu" bindtap="removeInputValue"></text>
+</view>
+
+<!-- 搜索提示 -->
+<view class="search" hidden="{{searchTip}}">
+  <text class="top ">搜索 "{{searchTipWord}}"</text>
+  <block wx:for="{{searchSuggest}}" wx:key="index">
+  <view class="tip iconfont icon-sousuo" data-keyword="{{item.keyword}}" bindtap="toSearchResult">{{item.keyword}}</view>
+</block>
+
+</view>
+<!-- 音乐图标 -->
+<view class="music">
+  <text class="blue">M</text>
+  <text class="red">u</text>
+  <text class="yellow">s</text>
+  <text class="blue">i</text>
+  <text class="green">c</text>
+</view>
+
+<!-- 历史记录 -->
+<view class="history" hidden="{{isShowHistory}}">
+  <text class="sameStyle">历史</text>
+  <scroll-view scroll-x="true" class="scroll-view_H">
+    <block wx:for="{{history}}" wx:key="index">
+      <view class="historybg" data-keyword="{{item}}"  bindtap="toSearchResult">{{item}}</view>
+    </block>
+  </scroll-view>
+  <text class="remove iconfont icon-xiazai14" bindtap="remove"></text>
+</view>
+
+<!-- 热搜榜 -->
+<view class="hot">
+  <text class="sameStyle">热搜</text>
+  <view class="hotlist">
+    <block wx:for="{{hotSearch}}" wx:key="index">
+    <view class="hotlistitem" data-keyword="{{item.first}}"  bindtap="toSearchResult"><text class="index">{{index+1}}</text>{{item.first}}</view>
+  </block>
+
+  </view>
+</view>
+
+<!-- 点击删除图标提示用户是否删除 -->
+<view class="model" hidden="{{!isShowModel}}" bindtap="cancel">
+  <view class="removeText" catchtap="stopCancel">
+    <view class="removeall">确定清空所有历史记录?</view>
+    <view class="same" >
+      <text bindtap="cancel">取消</text>
+      <text class="sure" bindtap="sure">确定</text>
+    </view>
+
+
+  </view>
+</view>
+
+
+<!-- 搜索结果显示信息中的单曲、歌单、视频的字体 -->
+<view class="searchInformation" hidden="{{back}}">
+<view class="InformationTop">
+  <view class="iconfont icon-fanhui" bindtap="back"></view>
+  <view class="InformationItem">
+    <block wx:for="{{info}}" wx:key="index">
+    <view class="{{index === infoIndex? 'itemActive': ''}}" bindtap="info" data-type="{{item.type}}" data-index="{{index}}">
+      {{item.name}}
+      <view class="{{index === infoIndex? 'purple': ''}}"></view>
+    </view>
+    
+  </block>
+  
+  </view>
+</view>
+
+<!-- 显示musiclist的组件 -->
+ <view class="musiclist" wx:if="{{infoIndex ===0? '0':''}}">
+  <scroll-view scroll-y="true" class="sameheight"  bindscrolltolower="ReachBottomMusiclist">
+  <x-musiclist  musiclist="{{musiclist}}"/>
+  <x-loading loading="{{loading}}" loadingComplete="{{loadingComplete}}"/>
+ </scroll-view>
+ </view>
+ <!-- 显示newplaylist的组件 -->
+<view class="playlist" wx:if="{{infoIndex ===1? '0':''}}">
+  <scroll-view scroll-y="true" class="sameheight"  bindscrolltolower="ReachBottomPlaylist">
+ <x-new-playlist newPlaylist="{{newPlaylist}}"/>
+ <x-loading loading="{{loading}}" loadingComplete="{{loadingComplete}}"/>
+    
+  </scroll-view>
+</view>
+<!-- 显示mv的组件 -->
+<view class="mv" wx:if="{{infoIndex ===2? '0' :''}}">
+<scroll-view scroll-y="true" class="sameheight"  bindscrolltolower="ReachBottomMV">
+    <x-mv mv="{{mv}}"/>
+    <x-loading loading="{{loading}}" loadingComplete="{{loadingComplete}}"/>
+</scroll-view>
+</view> 
+
+
+
+
+
+</view>
+
+
+

@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#000000",
+  "usingComponents": {
+    "x-loading": "/components/loading/loading"
+  }
+
+}

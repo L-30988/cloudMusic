@@ -1,0 +1,130 @@
+/* pages/musiclist/musiclist.wxss */
+.container{
+  height: 320rpx;
+  filter:blur(40rpx);
+  opacity: 0.4
+}
+.mask{
+  position: absolute;
+  width: 100%;
+  height: 350rpx;
+  background-color: rgb(119, 117, 117);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.img{
+  width: 250rpx;
+  height: 250rpx;
+  margin-right: 45rpx;
+  border-radius: 50%;
+}
+.info{
+  display:flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 320rpx;
+  padding: 40rpx;
+  box-sizing: border-box;
+  align-items: center;
+}
+.detail{
+  flex-grow: 1;
+  line-height: 40rpx;
+  width: 10%;
+}
+.name{
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 350;
+  
+}
+.description{
+  color: rgb(223, 221, 221);
+  font-size: 20rpx;
+  font-weight: 200rpx;
+   display: -webkit-box;
+    -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.creator{
+   display:flex;
+   padding: 15rpx
+}
+.avatarUrl{
+  border-radius: 60%;
+  width: 50rpx;
+  height: 50rpx
+}
+.nickname{
+  color: rgb(223, 221, 221);
+  font-size: 25rpx;
+ padding-left: 10rpx
+}
+.text {
+width: 100%;
+height: 80rpx;
+background-color: #fff;
+border-radius: 50rpx;
+font-size: 30rpx;
+}
+.text-img{
+  width: 50rpx;
+  height: 50rpx;
+  padding: 18rpx;
+ 
+ 
+}
+.text-tx{
+  margin: 100rpx;
+  margin-top: -60rpx
+}
+
+/*loading*/
+.loading {
+padding: 50rpx 0;
+text-align: center;
+color: #888;
+font-size: 26rpx;
+}
+@keyframes loading{
+	0%{ transform: translateY(0rpx)}
+	50%{ transform: translateY(20rpx)}
+	100%{ transform: translateY(0rpx)}
+}
+.loading text {
+width: 5rpx;
+height: 30rpx;
+background-color: #2A0463;
+position: relative;
+display: inline-block;
+margin-right: 6rpx;
+border-radius: 3rpx;
+animation: loading .9s linear infinite;
+transform-origin: center bottom;
+
+}
+.loading view {
+display: inline-block;
+vertical-align: baseline;
+height: 30rpx;
+overflow: hidden;
+margin-left: 10rpx;
+
+}
+
+.loading .cl2 {
+animation-delay: -.6s;
+
+}
+.loading .cl3 {
+animation-delay: -.3s;
+
+}
+
+
+

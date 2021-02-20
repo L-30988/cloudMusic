@@ -1,0 +1,79 @@
+<view class="contrain">
+  <!--搜索-->
+  <view class="header">
+    <view class="search">
+      <x-search bindtap="goToSearch" />
+    </view>
+  </view>
+
+  <!--轮播图-->
+  <view class="swiper">
+    <swiper indicator-dots="true" autoplay="true" interval="2000" duration="1000" indicator-color="rgb(230, 219, 219)"
+      indicator-active-color="#2A0463" circular="true">
+      <block wx:for="{{swiperUrl}}" wx:key="url">
+        <swiper-item>
+          <image class="img" src="{{item.imageUrl}}" mode="widthFix heightFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!--列表-->
+  <view class="list">
+    <view class="iconfont icon-zuixinnew3" bindtap="goToNewsong"></view>
+    <view class="iconfont icon-gedan" bindtap="goToPlaylist"></view>
+    <view class="iconfont icon-MV" bindtap="goToMV"></view>
+  </view>
+
+  <!--推荐歌单-->
+  <view class="playlist-recommend">—推荐歌单—</view>
+  <view class="more" bindtap="goToPlaylist">更多</view>
+  <view class="playlist-container">
+    <block wx:for="{{playlist}}" wx:key="id">
+      <x-playlist playlist="{{item}}"></x-playlist>
+    </block>
+  </view>
+
+  <!--最新音乐-->
+  <view class="playlist-recommend">—推荐音乐—</view>
+  <view class="more" bindtap="goToNewsong">更多</view>
+  <view class="recommend">
+    <scroll-view scroll-y="true" style="height: 383rpx;" enhanced="true" show-scrollbar="false">
+      <block wx:for="{{newSong}}" wx:key="index">
+        <view class="recommendList" bindtap="goToPlayer" data-musicid="{{item.id}}" data-index="{{index}}">
+          <image class="recommendImg" src="{{item.picUrl}}" mode="widthFix heightFix" />
+          <text class="width === 200rpx ? 'playname' : 'playlist-name'">{{item.name}}</text>
+          <text class="player">--{{item.song.artists[0].name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <!--mv-->
+  <view class="playlist-recommend">—推荐mv—</view>
+  <view class="more" bindtap="goToMV">更多</view>
+  <view class="mvList">
+    <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+      <block wx:for="{{recommendMV}}" wx:key="index">
+        <view class="scroll-view-item_H" bindtap="goToMVDetail" data-mvId="{{item.id}}">
+          <image class="mvImg"
+            src="{{item.picUrl}}"
+            mode="widthFix heightFix" />
+          <text class="playlist-playcount">{{item.playCount}}</text>
+          <view class="mvname">{{item.name}}</view>
+          <text class="mvautor">{{item.artistName}}</text>
+        </view>
+      </block>
+
+
+
+    </scroll-view>
+  </view>
+
+
+
+
+
+
+</view>
+

@@ -1,0 +1,35 @@
+/* pages/mv/mv.wxss */
+page {
+  background-color: rgb(245, 245, 245);
+
+ 
+}
+.all{
+font-size: 32rpx;
+position: fixed;
+width: 100%;
+z-index: 99;
+background-color: rgb(245, 245, 245);
+}
+.same{
+  display: flex;
+  justify-content: space-around;
+}
+.area{
+  margin-top: 15rpx;
+}
+.order{
+  width: 480rpx;
+  margin-bottom: 10rpx;
+}
+.item{
+text-align: center;
+color: blueviolet;
+  height: 45rpx;
+  border-radius: 40%;
+  background-color:  rgb(243, 229, 255);
+}
+.height{
+  height: 170rpx;
+  
+}

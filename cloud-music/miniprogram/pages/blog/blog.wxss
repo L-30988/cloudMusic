@@ -1,0 +1,44 @@
+/* pages/blog/blog.wxss */
+
+.header{
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  background-color: #fff;
+  height: 100rpx;
+  position: fixed;/*固定在顶部*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  box-sizing: border-box;
+}
+.header .icon-fabu{
+  font-size: 48rpx;
+}
+.publish{
+  width: 68rpx;
+  height: 68rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.search{
+  flex: 1;
+}
+.blog-list{
+  margin-top: 105rpx;
+
+}
+.blog-panel{
+  margin-bottom: 5rpx;
+  box-sizing: border-box;
+}
+/*loading*/
+.loading {
+  padding: 50rpx 0;
+  text-align: center;
+  color: #888;
+  font-size: 26rpx;
+  }

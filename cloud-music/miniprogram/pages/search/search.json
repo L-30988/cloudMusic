@@ -1,0 +1,10 @@
+{
+  "disableScroll":true,
+  "usingComponents": {
+    "x-musiclist":"/components/musiclist/musiclist",
+    "x-new-playlist":"/components/new-playlist/new-playlist",
+    "x-mv": "/components/mv/mv",
+    "x-loading": "/components/loading/loading"
+  },
+  "navigationBarTitleText": "搜索"
+}

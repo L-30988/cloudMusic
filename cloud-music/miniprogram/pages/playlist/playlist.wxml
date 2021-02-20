@@ -1,0 +1,12 @@
+
+<view class="playlist-container">
+<block wx:for="{{playlist}}" wx:key="id">
+<x-playlist playlist="{{item}}"></x-playlist>
+</block>
+</view>
+<!--loading-->
+
+ <x-loading loading="{{loading}}" loadingComplete="{{loadingComplete}}"/>
+  
+
+

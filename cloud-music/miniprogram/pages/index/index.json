@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "x-search": "/components/search/search",
+    "x-playlist": "/components/playlist/playlist"
+
+  },
+  "enablePullDownRefresh": true
+}

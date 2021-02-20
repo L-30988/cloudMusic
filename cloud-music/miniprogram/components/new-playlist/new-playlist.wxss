@@ -1,0 +1,32 @@
+
+.newPlaylist{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15rpx;
+  }
+  
+  .img{
+    width: 80rpx;
+    height: 80rpx;
+    margin-left: 25rpx;
+    border-radius: 15rpx;
+  }
+  .playlistname{
+    display: flex;
+    flex-direction: column;
+   
+    margin-left: 25rpx;
+  }
+  .name{
+    width: 580rpx;
+  font-size: 30rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  .author{
+  font-size: 22rpx;
+  color: rgb(100, 100, 100);
+  }

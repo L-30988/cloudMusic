@@ -1,0 +1,11 @@
+
+<view class="all">
+ 
+   <image class="img" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fww2.sinaimg.cn%2Fmw690%2F006VxdWHgy1gm73e45xj3j30u01hcki6.jpg&refer=http%3A%2F%2Fwww.sina.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612607898&t=4ae842b2ffdb5c75a028c0cd2ecfab5a" mode="widthFix heightFix"/>
+
+  <view class="time">
+    <view class="a" bindtap="jump">跳过</view>
+  </view>
+ 
+
+</view>

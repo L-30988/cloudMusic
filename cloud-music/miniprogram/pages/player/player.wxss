@@ -1,0 +1,120 @@
+/* pages/player/player.wxss */
+.container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: blur(88rpx);
+  opacity: 0.5;
+  z-index: -1
+}
+.mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: #222
+}
+.info{
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
+.discoverImg{
+  width: 600rpx;
+  height: 600rpx;
+  background: url('https://s3.music.126.net/mobile-new/img/disc.png?d3bdd1080a72129346aa0b4b4964b75f=') no-repeat center/contain;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,140rpx)
+
+}
+.discoverImg::after{
+  content: '';
+  width: 192rpx;
+  height: 274rpx;
+  position: absolute;
+  top: -150rpx;
+  left: 260rpx;
+  background: url('https://s3.music.126.net/m/s/img/needle.png?702cf6d95f29e2e594f53a3caab50e12') no-repeat center/contain;
+  transform: rotate(-15deg);
+  transform-origin: 20rpx 20rpx;
+  transition: transform .5s ease;
+
+}
+.play.discoverImg::after{
+  transform: rotate(4deg);
+
+}
+.player-Img{
+  width: 340rpx;
+  height: 340rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -168rpx;
+  margin-left: -168rpx;
+}
+.rotation{
+  animation: rotation 12s linear infinite;
+  -webkit-animation: rotation 12s linear infinite;
+  -moz-animation: rotation 12 linear infinite;
+  -o-animation: rotation 12s linear infinite
+}
+.rotation-paused{
+  animation-play-state: paused;
+
+}
+@keyframes rotation{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.progress-bar{
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15%
+
+}
+
+
+.control{
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+.control .iconfont{
+  color: rgb(221, 218, 218)
+}
+.icon-shangyishoushangyige, .icon-xiayigexiayishou{
+  font-size: 50rpx;
+
+
+}
+.icon-bofang1, .icon-zanting1{
+  font-size: 100rpx;
+  margin: 0 55rpx;
+}
+/*隐藏歌词滚动条*/
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+

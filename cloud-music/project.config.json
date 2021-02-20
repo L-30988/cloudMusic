@@ -1,0 +1,136 @@
+{
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "useApiHostProcess": true
+  },
+  "appid": "wxcdaa69d8ff806b01",
+  "projectname": "cloud-music",
+  "libVersion": "2.14.1",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "compileType": "miniprogram",
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "musiclist",
+          "pathName": "pages/musiclist/musiclist",
+          "query": "playlistId=3099335800",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/blog/blog",
+          "pathName": "pages/blog/blog",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "blog-edit",
+          "pathName": "pages/blog-edit/blog-edit",
+          "query": "nickName=\"3Lin\"&avatarUrl=https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqobHl86…Kwn7IL5DYRRd1VBPnXaxdElL2CrvibiafySqHO2VUn7Bg/132",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/profile/profile",
+          "pathName": "pages/profile/profile",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/newsong/newsong",
+          "pathName": "pages/newsong/newsong",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mv/mv",
+          "pathName": "pages/mv/mv",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mv-detail/mv-detail",
+          "pathName": "pages/mv-detail/mv-detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/advertisement/advertisement",
+          "pathName": "pages/advertisement/advertisement",
+          "query": "playlistId=3099335800",
+          "scene": null
+        },
+        {
+          "name": "pages/player/player",
+          "pathName": "pages/player/player",
+          "query": "playlistId=3099335800",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/blog/blog",
+          "pathName": "pages/blog/blog",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<view class="all">
+  <view class="mvcenter">
+    <block wx:for="{{mvs}}" wx:key="index">
+    <view class="mvitem" bindtap="goToMVDetail" data-mvid="{{item.id}}">
+      <view class="mv">
+        <view class="bgurl" style="background:url({{item.cover}}) center/cover no-repeat"></view>
+        <view class="mask"></view>
+        <view class="bg">
+          <view class="mvimg"><text class="textmv">mv</text></view>
+         <view class="main">
+          <view class="image-border image-border1"></view>
+				<view class="image-border image-border2"></view>
+				<view class="image-border image-border3"></view>
+        <view class="image-border image-border4"></view>
+        <image class="img" src="{{item.cover}}" mode="widthFix heightFix"/> 
+          </view> 
+          <text class="duration">{{item.duration}}</text>
+       
+
+        </view>
+        
+
+      </view>
+
+      
+ <view class="text">{{item.name}}</view>
+ <view class="playCount">{{item.playCount}}</view>
+
+    </view>
+  </block>
+   
+
+</view>
+</view>

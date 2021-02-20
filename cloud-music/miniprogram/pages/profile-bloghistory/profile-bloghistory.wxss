@@ -1,0 +1,8 @@
+/* pages/profile-bloghistory/profile-bloghistory.wxss */
+/*loading*/
+.loading {
+  padding: 50rpx 0;
+  text-align: center;
+  color: #888;
+  font-size: 26rpx;
+  }

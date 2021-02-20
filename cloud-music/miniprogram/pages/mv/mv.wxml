@@ -1,0 +1,30 @@
+<view class="all">
+  <view class="same area">
+    <text>地区:</text>
+    <block wx:for="{{Area}}" wx:key="index">
+    <text class="{{item.name === areaName? 'item': ''}}" bindtap="area" data-name="{{item.name}}">{{item.name}}</text>
+  </block>
+   
+  </view>
+  <view class="same type">
+    <text>类型:</text>
+    <block wx:for="{{Type}}" wx:key="index">
+    <text class="{{item.name === typeName? 'item': ''}}" bindtap="type" data-name="{{item.name}}">{{item.name}}</text>
+  </block>
+   
+  </view>
+  <view class="same order">
+    <text>排序:</text>
+    <block wx:for="{{Order}}" wx:key="index">
+    <text class="{{item.name === orderName? 'item': ''}}" bindtap="order" data-name="{{item.name}}">{{item.name}}</text>
+  </block>
+
+  </view>
+</view>
+<view class="height"></view>
+
+<!-- 瀑布流mv组件 -->
+<x-mv mv="{{mv}}"/>
+
+<x-loading loading="{{loading}}" loadingComplete="{{loadingComplete}}"/>
+
