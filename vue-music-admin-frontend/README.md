@@ -1,90 +1,11 @@
-# vue-admin-template
+这是一个基于vue的后台管理前端项目，前端使用vue-admin-template模板进行二次开发，使用vue-admin-template模板作为后台管理前端项目用起来十分方便，即可根据自己需求进行修改开发。  
+而作为音乐小程序端的后台管理项目，对接的数据库是云数据库，即可对小程序端的内容进行修改，目前实现的功能有两个，一个是歌单管理页面，另一个就是博客管理页面。
 
-English | [简体中文](./README-zh.md)
+问题及解决：
+由于vue是单页面应用（spa），在加载时会把应用含有的内容加载出来，这将发现了一个问题，就是在切换不同页面时它不会自动刷新，在当前的项目中，歌单管理页面它可以实现懒加载效果，滚动触底加载新数据，但是切换到博客管理页面时，博客管理页面向下滚动，然而没有加载出博客数据，打开浏览器的开发者工具查看，发现触底事件是有触发，但触发加载的是歌单管理页面的数据，然后我尝试刷新一下，它才能加载博客数据，而没刷新之前可能一直刚开始的页面没有变化，这才导致加载数据没有发生改变。而解决方法，我采取进入每个页面时都会刷新一次，这样就解决了加载数据的问题。在每个页面创建created阶段时去刷新一次，当然这个刷新不会导致死循环刷新，方法就是拿到当前页面的url地址，在created阶段进行判断，url地址它可以有一些特殊符号的出现，比如#，利用判断#在url地址是否存在，存在则不刷新，不存在则补个#进去并刷新（$router.go(0))，在刷新的同时也加个loading提示，让页面比较友好一点。
+目前实现：
+1.登录页面（vue-admin-template自带，没有进行开发，点击登录就可以进入歌单管理页面）
+2.歌单管理页面（在当前页面中，管理员可以修改歌单信息，包括文字、图片等，点击编辑按钮即可进入编辑页面进行编辑，在编辑页面中，首页会通过歌单管理页面传递过来的单条歌单的id进行查找并在编辑页面显示，之后进行编辑即可，在更换图片的时候，其实利用了小程序云存储的功能，每更换一张图片，它就会上传到云存储中去，并会把之前更换的图片进行删除，目的为了让存储空间充分利用，减少不必要的空间浪费。上传之后在后端会返回相应的fileid，然后点击更新按钮之后，它就会把编辑信息和fileid一并发送到后端，由后端操作数据库进行更新修改，之后就会有更新成功提示并返回歌单管理页面，歌单管理页面就会重新加载数据，删除按钮也是一样，点击删除，拿到当前单条id传给后端，由后端删除数据库内容并返回给前端，删除成功后也是重新加载数据）
+3.博客页面（读取数据库里内容并列表展示在博客页面，管理员可以对不良信息进行删除，删除功能跟歌单管理页面一样）
+总结：实现的页面不多，但对小程序的云数据库、云存储、及云函数都有一定的操作。
 
-> A minimal vue admin template with Element UI & axios & iconfont & permission control & lint
-
-**Live demo:** http://panjiachen.github.io/vue-admin-template
-
-
-**The current version is `v4.0+` build on `vue-cli`. If you want to use the old version , you can switch branch to [tag/3.11.0](https://github.com/PanJiaChen/vue-admin-template/tree/tag/3.11.0), it does not rely on `vue-cli`**
-
-## Build Setup
-
-```bash
-# clone the project
-git clone https://github.com/PanJiaChen/vue-admin-template.git
-
-# enter the project directory
-cd vue-admin-template
-
-# install dependency
-npm install
-
-# develop
-npm run dev
-```
-
-This will automatically open http://localhost:9528
-
-## Build
-
-```bash
-# build for test environment
-npm run build:stage
-
-# build for production environment
-npm run build:prod
-```
-
-## Advanced
-
-```bash
-# preview the release environment effect
-npm run preview
-
-# preview the release environment effect + static resource analysis
-npm run preview -- --report
-
-# code format check
-npm run lint
-
-# code format check and auto fix
-npm run lint -- --fix
-```
-
-Refer to [Documentation](https://panjiachen.github.io/vue-element-admin-site/guide/essentials/deploy.html) for more information
-
-## Demo
-
-![demo](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/demo.gif)
-
-## Extra
-
-If you want router permission && generate menu by user roles , you can use this branch [permission-control](https://github.com/PanJiaChen/vue-admin-template/tree/permission-control)
-
-For `typescript` version, you can use [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template) (Credits: [@Armour](https://github.com/Armour))
-
-## Related Project
-
-- [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
-
-- [electron-vue-admin](https://github.com/PanJiaChen/electron-vue-admin)
-
-- [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)
-
-- [awesome-project](https://github.com/PanJiaChen/vue-element-admin/issues/2312)
-
-## Browsers support
-
-Modern browsers and Internet Explorer 10+.
-
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
-| --------- | --------- | --------- | --------- |
-| IE10, IE11, Edge| last 2 versions| last 2 versions| last 2 versions
-
-## License
-
-[MIT](https://github.com/PanJiaChen/vue-admin-template/blob/master/LICENSE) license.
-
-Copyright (c) 2017-present PanJiaChen
